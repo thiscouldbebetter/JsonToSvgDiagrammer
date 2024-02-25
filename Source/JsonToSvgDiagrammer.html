@@ -1,0 +1,54 @@
+<html>
+<body>
+
+<div id="divUi">
+
+	<h3>JSON to SVG Diagrammer</h3>
+
+	<p>
+		Define a box-and-arrow diagram in JSON, then
+		click the Convert button to convert it to an SVG.
+	</p>
+
+	<div>
+		<label>Diagram as JSON:</label>
+		<button onclick="UiEventHandler.buttonDiagramAsJsonClear_Clicked()">
+			Clear
+		</button>
+		<button onclick="UiEventHandler.buttonDiagramAsJsonLoadDemo_Clicked()">
+			Load Demo
+		</button>
+		<br />
+		<textarea id="textareaDiagramAsJson" cols="40" rows="10"></textarea>
+	</div>
+
+	<button onclick="UiEventHandler.buttonConvertJsonToSvg_Clicked()">
+		Convert JSON to SVG
+	</button>
+
+	<div>
+		<label>Diagram as SVG:</label><br />
+		<textarea id="textareaDiagramAsSvg" cols="40" rows="10"></textarea>
+	</div>
+
+	<button onclick="UiEventHandler.buttonRenderSvgAsImage_Clicked()">
+		Render SVG as Image
+	</button>
+
+	<div>
+		<label>Diagram as Image:</label><br />
+		<div id="divDiagramAsImage"></div>
+	</div>
+
+</div>
+
+<script type="text/javascript" src="UiEventHandler.js"></script>
+
+<script type="text/javascript" src="ComponentArrow.js"></script>
+<script type="text/javascript" src="ComponentBox.js"></script>
+<script type="text/javascript" src="ComponentText.js"></script>
+<script type="text/javascript" src="Coords.js"></script>
+<script type="text/javascript" src="Diagram.js"></script>
+
+</body>
+</html>
